@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#101619" />
+  <title>AFTER THE TIDE — A Harbor City Story</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="After the Tide open-world action game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">AT</span><span>AFTER THE TIDE<small>HARBOR CITY · 2049</small></span></div>
+      <div class="chapter"><span class="live-dot"></span><span id="chapter-label">CHAPTER 01&nbsp; / &nbsp;THE RETURN</span></div>
+      <button id="map-toggle" class="icon-button" aria-label="Toggle map" title="Toggle map">⌖</button>
+    </header>
+    <section class="mission-card" aria-live="polite">
+      <div class="eyebrow"><span class="eyebrow-line"></span><span id="mission-kicker">YOUR STORY</span></div>
+      <h1 id="mission-title">The City<br/>Didn't Wait.</h1>
+      <p id="mission-copy">Eighteen years away. One old friend missing. Find out what the harbor remembers.</p>
+      <div id="objectives" class="objectives"></div>
+      <div id="mission-progress" class="progress-row"><span>CASE FILE</span><span id="progress-label">01 — 04</span><div class="progress-track"><i id="progress-fill"></i></div></div>
+    </section>
+    <div class="location-pill"><span class="location-pin">⌖</span><span id="location-name">OLD HARBOR</span><span class="location-sep">/</span><span id="clock">21:14</span></div>
+    <aside class="minimap-frame"><div class="map-label">HARBOR CITY <span>N</span></div><canvas id="minimap" width="180" height="180"></canvas><div class="map-foot"><span>FIELD MAP</span><span id="map-district">DOCKLANDS</span></div></aside>
+    <div id="interaction" class="interaction hidden"><kbd>E</kbd><span id="interaction-text">Talk</span></div>
+    <div id="toast" class="toast hidden"></div>
+    <section class="bottom-hud">
+      <div class="player-state"><div class="portrait">M</div><div class="state-lines"><div class="state-label">MARCUS VALE <span id="heat-label">CLEAN</span></div><div class="health-track"><i id="health-fill"></i></div><div class="state-meta"><span id="health-text">100</span> VITALS <span class="dot-sep">·</span><span id="armor-text">40</span> ARMOR</div></div></div>
+      <div class="controls-hint"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> MOVE</span><span><kbd>SHIFT</kbd> SPRINT</span><span><kbd>E</kbd> INTERACT / DRIVE</span></div>
+      <div class="weapon-state"><div class="weapon-icon" id="weapon-icon">⌁</div><div><div class="weapon-name" id="weapon-name">SERVICE PISTOL</div><div class="ammo"><span id="ammo-count">12</span><span class="ammo-dim"> / ∞</span></div></div><kbd id="weapon-key">1</kbd></div>
+    </section>
+    <div id="crosshair" class="crosshair hidden"><i></i><i></i></div>
+    <div id="dialogue" class="dialogue hidden"><div class="dialogue-person"><span id="dialogue-initial">?</span><small id="dialogue-role">HARBOR CITY</small></div><div class="dialogue-content"><div id="dialogue-name" class="dialogue-name">A familiar face</div><p id="dialogue-line"></p><button id="dialogue-next">CONTINUE <span>↗</span></button></div></div>
+    <div id="start-screen" class="screen-cover">
+      <div class="cover-art"><div class="sun-haze"></div><div class="cover-grid"></div></div>
+      <div class="start-copy"><div class="eyebrow"><span class="eyebrow-line"></span> AN OPEN-WORLD STORY</div><h2>AFTER<br/><em>THE TIDE</em></h2><p>Some things don't stay buried.</p><div class="start-meta"><span>HARBOR CITY</span><span>·</span><span>ONE NIGHT TO FIND THE TRUTH</span></div><button id="start-button" class="primary-button">ENTER THE CITY <span>↗</span></button><div class="start-controls">WASD TO MOVE <span>·</span> E TO INTERACT <span>·</span> MOUSE TO AIM</div></div>
+      <div class="cover-side-note">A STORY OF LOYALTY<br/>AND THE COST OF COMING HOME</div>
+    </div>
+    <div id="pause-screen" class="screen-cover pause-screen hidden"><div class="pause-panel"><div class="eyebrow"><span class="eyebrow-line"></span> HARBOR CITY</div><h2>PAUSED<span>.</span></h2><p>Take a breath. The city will still be here.</p><button id="resume-button" class="primary-button">BACK TO THE CITY <span>↗</span></button><div class="pause-controls">WASD MOVE · SHIFT SPRINT · E INTERACT / ENTER VEHICLE<br/>MOUSE AIM · CLICK FIRE · 1 / 2 SWITCH WEAPON · R RELOAD · M MAP</div></div></div>
+    <div id="ending-screen" class="screen-cover hidden"><div class="ending-panel"><div class="eyebrow"><span class="eyebrow-line"></span> CASE CLOSED</div><h2>THE TIDE<br/><em>TURNED.</em></h2><p>For the first time in eighteen years, Marcus knows where home is.</p><button id="ending-button" class="primary-button">KEEP EXPLORING <span>↗</span></button></div></div>
+    <div class="touch-controls" id="touch-controls"><div class="touch-stick" id="touch-stick"><i></i></div><div class="touch-actions"><button id="touch-fire">FIRE</button><button id="touch-interact">E</button></div></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
