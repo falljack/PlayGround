@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#101a1c">
+  <title>Corner of the City — Urban Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="Urban Life city game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Corner of the City home"><span class="brand-mark">C</span><span>corner<span class="brand-light">/</span>city</span></a>
+      <div class="location"><span class="live-dot"></span><span id="district-label">OLD TOWN</span><i>•</i><span id="clock">09:41 AM</span></div>
+      <button id="sound-btn" class="icon-btn" aria-label="Toggle sound" title="Sound on">♫</button>
+    </header>
+    <section class="mission-card" id="mission-card">
+      <div class="eyebrow"><span class="eyebrow-icon">✦</span> TODAY'S LITTLE ADVENTURE</div>
+      <h1 id="mission-title">A little pick-me-up</h1>
+      <p id="mission-copy">Good mornings start at <b>June's Coffee</b>. Pick up a neighbor's order.</p>
+      <div class="mission-progress"><div class="progress-track"><span id="progress-fill"></span></div><span id="progress-text">0 / 3</span></div>
+      <div class="mission-reward"><span>☀</span> <span id="reward-copy">A warmer neighborhood</span></div>
+    </section>
+    <div class="minimap-frame"><canvas id="minimap" width="156" height="116"></canvas><div class="map-caption">YOUR NEIGHBORHOOD <span>↗</span></div></div>
+    <div class="status-pill"><span class="status-icon">✦</span><span id="status-copy">A fresh day is waiting</span></div>
+    <div class="controls-hint" id="controls-hint"><span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span><span>to walk</span><span class="key key-wide">SHIFT</span><span>to jog</span></div>
+    <div class="prompt" id="prompt" aria-live="polite"></div>
+    <div class="toast" id="toast" aria-live="polite"></div>
+    <div class="dialogue hidden" id="dialogue"><div class="dialogue-avatar" id="dialogue-avatar">J</div><div class="dialogue-body"><div class="dialogue-name" id="dialogue-name">JUNE</div><p id="dialogue-text"></p><button id="dialogue-action">Sounds good <span>↗</span></button></div><button class="dialogue-close" id="dialogue-close" aria-label="Close">×</button></div>
+    <div class="finish-card hidden" id="finish-card"><div class="finish-sun">☼</div><div class="eyebrow">A GOOD DAY, WELL SPENT</div><h2>You made their day.</h2><p>Three small kindnesses, one lovely neighborhood. Take a little more time to explore.</p><div class="finish-stats"><span><b id="finish-time">00:00</b><small>ON THE STREETS</small></span><span><b id="finish-kindness">03</b><small>GOOD DEEDS</small></span></div><button id="keep-exploring">Keep exploring <span>→</span></button></div>
+    <div class="mobile-controls" aria-label="Touch controls"><div class="dpad"><button data-dir="up" aria-label="Move up">▲</button><div><button data-dir="left" aria-label="Move left">◀</button><button data-dir="down" aria-label="Move down">▼</button><button data-dir="right" aria-label="Move right">▶</button></div></div><div class="touch-actions"><button id="touch-run" class="touch-run">RUN</button><button id="touch-interact" class="touch-interact">E</button><span>INTERACT</span></div></div>
+    <div id="start-screen" class="start-screen"><div class="start-sun">☼</div><div class="start-kicker">A SMALL OPEN-WORLD ADVENTURE</div><h1>Corner of<br><em>the City.</em></h1><p>Take the scenic route.<br>Say hello. Make somebody's morning.</p><button id="start-btn">Step outside <span>→</span></button><div class="start-foot">OLD TOWN · A PLACE TO CALL YOUR OWN</div></div>
+    <div id="pause-overlay" class="pause-overlay hidden"><div>PAUSED</div><p>Take your time. The city isn't going anywhere.</p><button id="resume-btn">Back to the neighborhood</button></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
