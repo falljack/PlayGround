@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#101513" />
+  <title>LAST RIDE — The Hollow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+  <div id="intro" class="intro">
+    <div class="intro-top"><span class="brand-mark">H</span><span>HOLLOW COUNTY · 1987</span><span class="top-right">FIELD REPORT 07 / 14</span></div>
+    <div class="intro-content">
+      <div class="eyebrow"><i></i> A FIRST-PERSON SURVIVAL HORROR</div>
+      <h1>LAST<br><em>RIDE</em></h1>
+      <p class="intro-copy">The road out is still there.<br>So is the thing that wants you to stay.</p>
+      <button id="start" class="start-button"><span>ENTER THE HOLLOW</span><b>↗</b></button>
+      <div class="intro-foot"><span>WASD MOVE &nbsp;·&nbsp; MOUSE LOOK</span><span>HEADPHONES RECOMMENDED</span></div>
+    </div>
+    <div class="case-file"><span>CASE NO.</span><strong>00841</strong><span>STATUS</span><strong class="red">UNRESOLVED</strong></div>
+  </div>
+  <div id="hud" class="hud hidden">
+    <div class="hud-top">
+      <div class="objective-card"><div class="micro-label">GET OUT OF HOLLOW COUNTY</div><div id="objective">Find a way out of the house</div><div class="objective-progress"><span id="progress"></span></div></div>
+      <div class="night-card"><span class="moon">◒</span><div><small>NIGHT</small><strong>01:47 <i>AM</i></strong></div><div class="night-line"></div></div>
+    </div>
+    <div class="crosshair"><i></i><i></i></div>
+    <div id="prompt" class="prompt"></div>
+    <div class="bottom-left"><div class="sound-indicator"><span class="sound-wave">)))</span><span id="soundText">THE WOODS ARE LISTENING</span></div><div class="controls-hint">[ SHIFT ] SPRINT &nbsp; [ E ] INTERACT &nbsp; [ F ] FLASHLIGHT</div></div>
+    <div class="inventory"><div class="inventory-title">RECOVERED PARTS <span id="partCount">00 / 03</span></div><div class="part-list"><div class="part" data-part="battery"><span class="part-icon">▰</span><span>BATTERY</span><b>—</b></div><div class="part" data-part="tire"><span class="part-icon">◉</span><span>SPARE TIRE</span><b>—</b></div><div class="part" data-part="fuel"><span class="part-icon">▥</span><span>GAS CAN</span><b>—</b></div></div></div>
+    <div class="fear"><span>COMPOSURE</span><div class="fear-track"><i id="fearBar"></i></div><b id="fearValue">100</b></div>
+    <div id="toast" class="toast"></div>
+  </div>
+  <div id="mobileControls" class="mobile-controls hidden"><div class="dpad"><button data-move="forward">▲</button><div><button data-move="left">◀</button><button data-move="back">▼</button><button data-move="right">▶</button></div></div><button id="mobileUse" class="mobile-use">USE</button><button id="mobileRun" class="mobile-run">RUN</button></div>
+  <div id="endScreen" class="end-screen hidden"><div class="end-card"><span class="eyebrow">HOLLOW COUNTY · 01:59 AM</span><h2 id="endTitle">YOU MADE IT OUT.</h2><p id="endText"></p><button id="restart" class="start-button"><span>PLAY AGAIN</span><b>↗</b></button></div></div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
