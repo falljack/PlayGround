@@ -16,3 +16,9 @@
 - 👤 [Explore the creator's projects](https://go.ondev.store/falljack).
 - 🌍 [Create with OMGithub](https://go.ondev.store/).
 <!-- omgithub:readme:end -->
+
+## Play
+
+Escape Hollow County by leaving the house, recovering the battery, spare tire, and gas can, then returning to the car at the end of the road. Press **E** to interact, **F** to toggle the flashlight, and **Shift** to sprint. Move with **WASD** and look with the mouse (click the game to recapture the mouse). Hide in marked lockers or crates if the echo gets close. On touchscreens, use the on-screen movement buttons, **USE**, and **RUN**, and drag the scene to look around.
+
+The game is a browser-based Three.js experience and can be served from this folder with any static web server.
